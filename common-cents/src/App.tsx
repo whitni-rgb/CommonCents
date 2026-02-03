@@ -1,5 +1,6 @@
 import  NavBanner  from './components/NavBanner';
-import { navLinks } from './config/navConfig'; // Import your "One Source of Truth"
+import { navLinks } from './config/navConfig';
+import './styling/generalStyling.css';
 
 function App() {
   // This is where you'll eventually add states like:
@@ -7,12 +8,15 @@ function App() {
 
   return (
     <>
-      {/* Hand the data from the config to the component via props */}
-      <NavBanner navLinks={navLinks} /> 
+      
       
       <main>
-        <h2>Welcome to CommonCents</h2>
-        {/* Your other page content goes here */}
+        <div id="window">
+          <h2>Welcome to CommonCents</h2>
+          <div id="navigation">
+            <NavBanner navLinks={navLinks} /> 
+          </div>
+        </div>
       </main>
     </>
   )
